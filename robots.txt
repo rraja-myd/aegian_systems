@@ -1,0 +1,44 @@
+# ==================================================
+# Robots.txt - aegiansystems.com
+# SEO + Spam Protection
+# ==================================================
+
+User-agent: *
+Allow: /
+
+# Block admin / system folders
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /private/
+Disallow: /cdn-cgi/
+
+# Block sensitive files
+Disallow: /.htaccess
+Disallow: /.env
+Disallow: /config.php
+Disallow: /phpinfo.php
+
+# Block spam keyword URLs
+Disallow: /*casino*
+Disallow: /*loan*
+Disallow: /*discount*
+Disallow: /*cheap*
+Disallow: /*offer*
+Disallow: /*kaufen*
+Disallow: /*billig*
+Disallow: /*sale*
+Disallow: /*-edition*
+Disallow: /*-bag*
+Disallow: /*-footwear*
+
+# Block query spam
+Disallow: /*?*
+
+# Allow sitemap
+Allow: /sitemap.xml
+
+Sitemap: https://www.aegiansystems.com/sitemap.xml

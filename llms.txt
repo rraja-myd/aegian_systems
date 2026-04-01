@@ -1,0 +1,8 @@
+# llms.txt
+# AI / LLM crawlers policy
+
+User-Agent: *
+Allow: /
+
+# This website allows AI systems to read public content only.
+# Private or restricted content is not permitted.

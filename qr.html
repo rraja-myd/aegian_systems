@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aegian Systems</title>
+  <style>
+    :root {
+      --primary: #2a5298;
+      --accent: #1e3c72;
+      --text-light: #ffffff;
+      --text-dark: #333333;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://www.transparenttextures.com/patterns/circles.png');
+      background-color: #f4f7fa;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffffcc;
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      color: var(--accent);
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    a.button-link, .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 20px;
+      background-color: var(--primary);
+      color: var(--text-light);
+      font-size: 20px;
+      font-weight: 600;
+      border: none;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    a.button-link:hover, .btn:hover {
+      background-color: var(--accent);
+      transform: scale(1.03);
+    }
+
+    /* Big colorful emoji icon on left */
+    .btn .emoji, a.button-link .emoji {
+      font-size: 32px;
+      margin-right: 14px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .contact-info {
+      display: none;
+      background-color: #ffffffee;
+      border-radius: 12px;
+      padding: 25px;
+      text-align: center;
+      font-family: 'Trebuchet MS', sans-serif;
+      color: #222;
+      box-shadow: inset 0 0 10px #ccc;
+    }
+
+    .contact-info strong {
+      display: block;
+      font-size: 22px;
+      color: #1e3c72;
+      margin-bottom: 12px;
+    }
+
+    .contact-info p {
+      margin: 6px 0;
+      font-size: 16px;
+    }
+
+    .contact-info a {
+      color: #1e3c72;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .save-contact-btn {
+      margin-top: 15px;
+      background-color: var(--accent);
+      color: var(--text-light);
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .save-contact-btn:hover {
+      background-color: #163265;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      .btn, .button-link {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Aegian Systems</h1>
+    <div class="button-group">
+      <a href="https://maps.app.goo.gl/RDgcrwwVQkEbpUE38" class="button-link" target="_blank" aria-label="Shop Location">
+        <span class="emoji" role="img" aria-hidden="true">📍</span> Shop Location
+      </a>
+      <button class="btn" onclick="toggleContact()" aria-expanded="false" aria-controls="contact-info" aria-label="Toggle Contact Details">
+        <span class="emoji" role="img" aria-hidden="true">📞</span> Save Contact Details
+      </button>
+      <a href="https://www.aegiansystems.com" class="button-link" target="_blank" aria-label="Visit Website">
+        <span class="emoji" role="img" aria-hidden="true">🌐</span> Visit Website
+      </a>
+      <a href="https://g.page/r/Cdty6dP3LYEGEBM/review" class="button-link" target="_blank" aria-label="Google Review">
+        <span class="emoji" role="img" aria-hidden="true">⭐️</span> Google Review
+      </a>
+    </div>
+
+    <div class="contact-info" id="contact-info" role="region" aria-live="polite" aria-hidden="true">
+      <strong>R. Raja B.E., M.Sc</strong>
+      <p>Aegian Systems, Computer Shop</p>
+      <p>📱 9585757538, 9585757539</p>
+      <p>📧 aegiansystems@gmail.com</p>
+      <p>🌍 <a href="https://www.aegiansystems.com" target="_blank" rel="noopener noreferrer">www.aegiansystems.com</a></p>
+      <button class="save-contact-btn" onclick="downloadVCard()">💾 Save Contact</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleContact() {
+      const info = document.getElementById("contact-info");
+      const btn = document.querySelector('button[aria-controls="contact-info"]');
+      if (info.style.display === "block") {
+        info.style.display = "none";
+        info.setAttribute('aria-hidden', 'true');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        info.style.display = "block";
+        info.setAttribute('aria-hidden', 'false');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    function downloadVCard() {
+      const vcard = `
+BEGIN:VCARD
+VERSION:3.0
+FN:R. Raja B.E., Computer Service
+ORG:Aegian Systems - Mayiladuthurai
+TEL;TYPE=cell:9585757538
+TEL;TYPE=cell:9585757539
+EMAIL:aegiansystems@gmail.com
+URL:https://www.aegiansystems.com
+END:VCARD
+      `.trim();
+
+      const blob = new Blob([vcard], { type: "text/vcard" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "R_Raja_Aegian_Systems.vcf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
