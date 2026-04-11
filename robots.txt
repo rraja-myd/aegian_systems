@@ -1,18 +1,20 @@
 # ==================================================
+
 # Robots.txt - aegiansystems.com
-# Optimized for GitHub Pages & SEO
+
+# SEO Optimized + Spam Protection (Safe Version)
+
 # ==================================================
 
 User-agent: *
-
-# 1. EXPLICIT ALLOWS (Prioritize your content)
 Allow: /
-Allow: /sales.html
-Allow: /*sale*
-Allow: /sitemap.xml
-Allow: /assets/
 
-# 2. BLOCK SYSTEM/ADMIN FOLDERS (Security)
+# ==============================
+
+# Block Admin / System Paths
+
+# ==============================
+
 Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /wp-login.php
@@ -22,20 +24,79 @@ Disallow: /backup/
 Disallow: /private/
 Disallow: /cdn-cgi/
 
-# 3. BLOCK SENSITIVE FILES
+# ==============================
+
+# Block Sensitive Files
+
+# ==============================
+
 Disallow: /.htaccess
 Disallow: /.env
 Disallow: /config.php
 Disallow: /phpinfo.php
+Disallow: /error_log
 
-# 4. BLOCK SPAM KEYWORDS (Filtered to avoid blocking real pages)
-# Note: These block paths/folders containing these words, not your real pages.
+# ==============================
+
+# Block Spam / Hack URLs
+
+# ==============================
+
 Disallow: /*casino*
-Disallow: /*Casino*
 Disallow: /*loan*
+Disallow: /*viagra*
+Disallow: /*porn*
+Disallow: /*sex*
+Disallow: /*adult*
+Disallow: /*cheap*
 Disallow: /*discount*
+Disallow: /*offer*
+Disallow: /*sale*
 Disallow: /*kaufen*
 Disallow: /*billig*
+Disallow: /*-bag*
+Disallow: /*-shoes*
+Disallow: /*-footwear*
 
-# 5. SITEMAP (Crucial for HTTPS Indexing)
+# ==============================
+
+# Allow Important Files
+
+# ==============================
+
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# ==============================
+
+# Crawl Delay (for bad bots)
+
+# ==============================
+
+Crawl-delay: 10
+
+# ==============================
+
+# Block Bad Bots (Optional but useful)
+
+# ==============================
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ==============================
+
+# Sitemap
+
+# ==============================
+
 Sitemap: https://www.aegiansystems.com/sitemap.xml
