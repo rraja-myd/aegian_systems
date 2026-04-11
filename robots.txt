@@ -8,7 +8,7 @@ User-agent: *
 # 1. EXPLICIT ALLOWS (Prioritize your content)
 Allow: /
 Allow: /sales.html
-Disallow: /*sale*
+Allow: /*sale*
 Allow: /sitemap.xml
 Allow: /assets/
 
