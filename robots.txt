@@ -2,7 +2,7 @@
 
 # Robots.txt - aegiansystems.com
 
-# SEO Optimized + Spam Protection (Safe Version)
+# Optimized for SEO + Basic Security + Spam Protection
 
 # ==================================================
 
@@ -11,7 +11,7 @@ Allow: /
 
 # ==============================
 
-# Block Admin / System Paths
+# Block Admin / System Areas
 
 # ==============================
 
@@ -46,8 +46,8 @@ Disallow: /*casino*
 Disallow: /*loan*
 Disallow: /*viagra*
 Disallow: /*porn*
-Disallow: /*sex*
 Disallow: /*adult*
+Disallow: /*sex*
 Disallow: /*cheap*
 Disallow: /*discount*
 Disallow: /*offer*
@@ -64,12 +64,12 @@ Disallow: /*-footwear*
 
 # ==============================
 
-Allow: /sitemap.xml
 Allow: /robots.txt
+Allow: /sitemap.xml
 
 # ==============================
 
-# Crawl Delay (for bad bots)
+# Optional: Reduce Bot Load
 
 # ==============================
 
@@ -77,7 +77,7 @@ Crawl-delay: 10
 
 # ==============================
 
-# Block Bad Bots (Optional but useful)
+# Block Heavy / Unwanted Bots
 
 # ==============================
 
@@ -95,7 +95,7 @@ Disallow: /
 
 # ==============================
 
-# Sitemap
+# Sitemap Location
 
 # ==============================
 
