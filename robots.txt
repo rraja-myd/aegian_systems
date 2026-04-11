@@ -30,7 +30,7 @@ Disallow: /*cheap*
 Disallow: /*offer*
 Disallow: /*kaufen*
 Disallow: /*billig*
-Disallow: /*sale*
+allow: /*sale*
 Disallow: /*-edition*
 Disallow: /*-bag*
 Disallow: /*-footwear*
