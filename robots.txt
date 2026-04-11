@@ -1,12 +1,18 @@
 # ==================================================
 # Robots.txt - aegiansystems.com
-# SEO + Spam Protection
+# Optimized for GitHub Pages & SEO
 # ==================================================
 
 User-agent: *
-Allow: /
 
-# Block admin / system folders
+# 1. EXPLICIT ALLOWS (Prioritize your content)
+Allow: /
+Allow: /sales.html
+Disallow: /*sale*
+Allow: /sitemap.xml
+Allow: /assets/
+
+# 2. BLOCK SYSTEM/ADMIN FOLDERS (Security)
 Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /wp-login.php
@@ -16,29 +22,20 @@ Disallow: /backup/
 Disallow: /private/
 Disallow: /cdn-cgi/
 
-# Block sensitive files
+# 3. BLOCK SENSITIVE FILES
 Disallow: /.htaccess
 Disallow: /.env
 Disallow: /config.php
 Disallow: /phpinfo.php
 
-# Block spam keyword URLs
+# 4. BLOCK SPAM KEYWORDS (Filtered to avoid blocking real pages)
+# Note: These block paths/folders containing these words, not your real pages.
 Disallow: /*casino*
+Disallow: /*Casino*
 Disallow: /*loan*
 Disallow: /*discount*
-Disallow: /*cheap*
-Disallow: /*offer*
 Disallow: /*kaufen*
 Disallow: /*billig*
-allow: /*sale*
-Disallow: /*-edition*
-Disallow: /*-bag*
-Disallow: /*-footwear*
 
-# Block query spam
-Disallow: /*?*
-
-# Allow sitemap
-Allow: /sitemap.xml
-
+# 5. SITEMAP (Crucial for HTTPS Indexing)
 Sitemap: https://www.aegiansystems.com/sitemap.xml
